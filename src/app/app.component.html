@@ -1,0 +1,15 @@
+<div class="app-container">
+    <div class="model-container">
+        <div #rendererContainer></div>
+    </div>
+    
+    <div class="animation-selector">
+        <label>Select Animation:</label>
+        <select (change)="changeAnimation($event)">
+          @for (anim of animations; track anim) {
+            <option [value]="anim.name">{{ anim.name }}</option>
+          }
+        </select>
+        <button (click)="playAudio()">Play Audio</button>
+    </div>
+</div>
